@@ -1,0 +1,11 @@
+[DEVICE]
+Name=P32MZ2048EFH144
+Clock=200000000
+[FILES]
+File0=Main.c
+File1=Config.c
+File2=UHB_Driver.c
+File3=USBdsc.c
+Count=4
+[BINARIES]
+Count=0

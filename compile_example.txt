@@ -1,0 +1,137 @@
+0 1 mikroCPIC32.exe -MSF -DBG -pP32MZ2048EFH144 -RA -DL -SSA -EBASE 0x9FC01000 -INTDEF MV_SRS7_IS32 -O11111113 -fo200 
+-N"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Internal MCU modules\P32MZ2048EFH144\Timer1 Interrupt\Timer1_Interrupt.mcp32" 
+-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" 
+-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Internal MCU modules\P32MZ2048EFH144\Timer1 Interrupt\" 
+-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" 
+-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Internal MCU modules\P32MZ2048EFH144\Timer1 Interrupt\" 
+"Timer1_Interrupt.c" "__Lib_CP0.emcl" "__Lib_Math.emcl" "__Lib_MathDouble_MZ_EF.emcl" "__Lib_System_MZ_EF.emcl" "__Lib_SoftResetDma.emcl" "__Lib_Delays.emcl"  
+
+
+
+
+0 1 mikroCPIC32.exe -MSF -DBG -pP32MZ2048EFH144 -RA -DL -SSA -EBASE 0x9FC01000 -INTDEF MV_SRS7_IS32 -O11111113 -fo200 
+					-N"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\PIC32\USB HID Bootloader.mcp32" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Defs\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\PIC32\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\Common Files\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Driver\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\PIC32\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\Common Files\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Driver\" 
+					"Main.c" "Config.c" "UHB_Driver.c" "USBdsc.c" 
+					"__Lib_CP0.emcl" "__Lib_Math.emcl" "__Lib_MathDouble_MZ_EF.emcl" "__Lib_System_MZ_EF.emcl" 
+					"__Lib_SoftResetDma.emcl" "__Lib_Delays.emcl" "__Lib_FLASH_MZ.emcl" "__Lib_USB_MZ_HS.emcl"  
+
+
+0 1 mikroCPIC32.exe -MSF -DBG -pP32MZ2048EFH100 -HEAP 8000 -DL -SSA -EBASE 0x9FC01000 -INTDEF MV_SRS7_IS512 -O11111113 -fo200 
+					-N"C:\Users\davec\GIT\Pic32mzCNC\Pic32mzClicker2_StepperControl.mcp32" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Defs\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" 
+					-SP"C:\Users\davec\GIT\Pic32mzCNC\" 
+					-SP"C:\Users\davec\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Packages\I2C_Lcd\Uses\" 
+					-SP"E:\Downloads\CNC _Papers\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" 
+					-IP"C:\Users\davec\GIT\Pic32mzCNC\" 
+					-IP"C:\Users\davec\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Packages\I2C_Lcd\Uses\" 
+					"Main.c" 
+					"Config.c" "Stepper.c" "Steptodistance.c" "Timers.c" "Kinematics.c" "Pins.c" "Serial_Dma.c" "Print.c" "GCODE.c" "Globals.c" "Limits.c" "Protocol.c" "Nut_Bolts.c" "Planner.c" "Flash_R_W.c" "__Lib_CP0.emcl" "__Lib_Math.emcl" "__Lib_MathDouble_MZ_EF.emcl" "__Lib_System_MZ_EF.emcl" "__Lib_SoftResetDma.emcl" "__Lib_Delays.emcl" "__Lib_CType.emcl" "__Lib_CString.emcl" "__Lib_CStdlib_EF.emcl" "__Lib_CMath_EF.emcl" "__Lib_MemManager.emcl" "__Lib_Conversions_EF.emcl" "__Lib_Sprintf_EF.emcl" "__Lib_Sprinti.emcl" "__Lib_Sprintl.emcl" "__Lib_UART_123456_MZ.emcl" "__Lib_PPS_P32MZ_100CAN.emcl" "DEFINES.pld"  
+
+
+
+
+
+0 1 mikroCPIC32.exe -MSF -DBG -pP32MZ2048EFH144 
+					-RA -DL -SSA -EBASE 0x9FC01000 
+					-INTDEF MV_SRS7_IS32 -O11111113 -fo200 
+					-N"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\PIC32\USB HID Bootloader.mcp32" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Defs\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\PIC32\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\Common Files\" 
+					-SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Driver\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\PIC32\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Projects\Common Files\" 
+					-IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Other\USB HID Bootloader MZ EF\Driver\" "Main.c" "Config.c" "UHB_Driver.c" "USBdsc.c" "__Lib_CP0.emcl" "__Lib_Math.emcl" "__Lib_MathDouble_MZ_EF.emcl" "__Lib_System_MZ_EF.emcl" "__Lib_SoftResetDma.emcl" "__Lib_Delays.emcl" "__Lib_FLASH_MZ.emcl" "__Lib_USB_MZ_HS.emcl"  
+
+0 1 mikroCPIC32.exe -MSF -DBG -pP32MX795F512L -RA -DL -SSA -EBASE 0x9FC01000 -INTDEF MV_SRS7_IS32 -O11111113 -fo80 -N"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Development Systems\EasyPIC Fusion v7\Led Blinking\LedBlinking.mcp32" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Development Systems\EasyPIC Fusion v7\Led Blinking\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Examples\Development Systems\EasyPIC Fusion v7\Led Blinking\" "LedBlinking.c" "__Lib_CP0.emcl" "__Lib_Math.emcl" "__Lib_MathDouble.emcl" "__Lib_System.emcl" "__Lib_SoftResetDma.emcl" "__Lib_Delays.emcl" "__Lib_CString.emcl" "__Lib_Conversions.emcl" "__Lib_LcdConsts.emcl" "__Lib_Lcd.emcl"  
+0 122 Compilation Started P32MX795F512L.c
+39364 123 Compiled Successfully P32MX795F512L.c
+0 122 Compilation Started __Lib_Delays.c
+176 123 Compiled Successfully __Lib_Delays.c
+0 122 Compilation Started LedBlinking.c
+51 123 Compiled Successfully LedBlinking.c
+0 127 All files Compiled in 63 ms  
+0 1144 Used RX: 11 (34%)   Free RX: 21 (66%) Used RX: 11 (34%)   Free RX: 21 (66%)
+0 1144 Static RAM (bytes): 0   Dynamic RAM (bytes): 131069 Static RAM (bytes): 0   Dynamic RAM (bytes): 131069
+0 1144 Used ROM (bytes): 452 (0%)  Free ROM (bytes): 523836 (100%) Used ROM (bytes): 452 (0%)  Free ROM (bytes): 523836 (100%)
+0 1144 Used BOOTROM (bytes): 320 (3%)  Free BOOTROM (bytes): 11953 (97%) Used BOOTROM (bytes): 320 (3%)  Free BOOTROM (bytes): 11953 (97%)
+0 125 Project Linked Successfully LedBlinking.mcp32
+0 128 Linked in 156 ms  
+0 129 Project 'LedBlinking.mcp32' completed: 875 ms  
+0 103 Finished successfully: 30 Nov 2025, 07:08:42 LedBlinking.mcp32
+
+
+mikroC PRO for PIC32 Command Line Options
+Usage: mikroCPIC32.exe [-<opts> [-<opts>]] [<infile> [-<opts>]] [-<opts>]] 
+Infile can be of *.c, *.emcl and *.pld type. 
+
+The following parameters are valid :
+
+-P <devicename> : MCU for which compilation will be done. 
+-FO <oscillator> : Set oscillator [in MHz]. 
+-SP <directory> : Add directory to the search path list. 
+-N <filename> : Output files generated to file path specified by filename. 
+-B <directory> : Save compiled binary files (*.emcl) to 'directory'. 
+-O : Miscellaneous output options. 
+-DBG : Generate debug info. 
+-MSF : Short message format. 
+-Y : Dynamic link for string literals. 
+-RA : Rebuild all sources in project. 
+-L : Check and rebuild new libraries. 
+-DL : Build all files as libraries. 
+-LHF : Generate Long hex format. 
+-PF : Project file name. 
+-EH <filename> : Full EEPROM HEX file name with path. 
+-HEAP <size> : Heap size in bytes. 
+-GC : Generate COFF file. 
+-PF : Project file name. 
+-SSA : Enable SSA optimization. 
+-UICD : ICD build type. 
+-INTDEF : Interrupt settings. 
+-EBASE : Exception base address. 
+Example:
+
+mikroCPIC32.exe -MSF -DBG -p32MX460F512L -Y -DL -O11111114 -fo80 -N"C:\Lcd\Lcd.mcp32" -SP"C:\Program Files\Mikroelektronika\mikroC PRO for PIC32\Defs" 
+              -SP"C:\Program Files\Mikroelektronika\mikroC PRO for PIC32\Uses" -SP"C:\Lcd\" "Lcd.c" "__Lib_Math.emcl" "__Lib_MathDouble.emcl" 
+              "__Lib_System.emcl" "__Lib_Delays.emcl" "__Lib_LcdConsts.emcl" "__Lib_Lcd.emcl"
+Parameters used in the example: 
+
+-MSF : Short Message Format; used for internal purposes by IDE. 
+-DBG : Generate debug info. 
+-p32MX460F512L : MCU PIC32MX460F512L selected. 
+-Y : Dynamic link for string literals enabled. 
+-DL : All files built as libraries. 
+-O11111114 : Miscellaneous output options : 
+1. Generate ASM file, valid values 0 or 1. 
+2. Include HEX opcodes, valid values 0 or 1. 
+3. Include ROM constants, valid values 0 or 1. 
+4. Include ROM addresses, valid values 0 or 1. 
+5. Generate LST file, valid values 0 or 1. 
+6. Include Debug Info, valid values 0 or 1. 
+7. Include Source Lines in Output Files, valid values 0 or 1. 
+8. The optimization level, valid values from 0 to 5. 
+-fo80 : Set oscillator frequency [in MHz]. 
+-N"C:\Lcd\Lcd.mcp32" -SP"C:\Program Files\Mikroelektronika\mikroC PRO for PIC32\Defs\" : Output files generated to file path specified by filename. 
+-SP"C:\Program Files\Mikroelektronika\mikroC PRO for PIC32\Defs\" : Add directory to the search path list. 
+-SP"C:\Program Files\Mikroelektronika\mikroC PRO for PIC32\Uses\" : Add directory to the search path list. 
+-SP"C:\Lcd\" : Add directory to the search path list. 
+"Lcd.c" "__Lib_Math.emcl" "__Lib_MathDouble.emcl" "__Lib_System.emcl" "__Lib_Delays.emcl" "__Lib_LcdConsts.emcl" "__Lib_Lcd.emcl" : Specify input files. 
+
+# Good working example
+ALL:
+	@Write-Host "Building all targets..."
+	@Write-Host ""
+	& "$(COMPILER_LOCATION)" -MSF -DBG -pP$(DEVICE) -HEAP $(HEAP_SIZE) -RA -DL -SSA -EBASE $(EBASE_ADDR) -INTDEF MV_SRS7_IS32 $(OPT_LEVEL) -fo200 -B"$([System.IO.Path]::GetFullPath('$(OBJ_DIR)'))\" -N".\$(MODULE).mcp32" $(SPFLAGS) $(IPFLAGS) "Main.c" "Config.c" "UHB_Driver.c" "USBdsc.c" "__Lib_CP0.emcl" "__Lib_Math.emcl" "__Lib_MathDouble_MZ_EF.emcl" "__Lib_System_MZ_EF.emcl" "__Lib_SoftResetDma.emcl" "__Lib_Delays.emcl" "__Lib_FLASH_MZ.emcl" "__Lib_USB_MZ_HS.emcl"

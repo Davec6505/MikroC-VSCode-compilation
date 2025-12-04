@@ -1,0 +1,107 @@
+# ======================================================================#
+# AUTHOR: David Coetzee                                                #
+# DATE: 16/08/2024                                                     #
+# EMAIL: davec6505@gmail.com                                           #
+#-----------------------------------------------------------------------#
+# NOTES:                                                               #
+# Makefile for mikroC PIC32 only. Uses PowerShell commands.             #
+#=======================================================================#
+ 
+
+# Set shell to PowerShell
+SHELL := powershell.exe
+.SHELLFLAGS := -NoProfile -Command
+
+# Project/module settings
+PROJ         := linklist
+MODULE_NAME  := test
+TARGET_NAME  := $(MODULE_NAME)
+
+# Root and dynamic directories (PowerShell Get-Location for current dir)
+ROOT_DIR     := $(shell Get-Location | Select-Object -ExpandProperty Path)
+SRC_DIR      := $(ROOT_DIR)\srcs
+INC_DIR      := $(ROOT_DIR)\incs
+OBJ_DIR      := $(ROOT_DIR)\objs
+BIN_DIR      := $(ROOT_DIR)\bins
+
+# mikroC PIC32 compiler and device selection
+CC := "C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\mikroCPIC32.exe"
+
+# Device and toolchain configuration (edit as needed)
+DEVICE       := P32MZ2048EFH144
+
+# Compiler flags (edit for your device/project)
+CFLAGS := -MSF -DBG -p$(DEVICE) -RA -DL -SSA -EBASE 0x9FC01000 -INTDEF MV_SRS7_IS32 -O11111113 -fo200
+
+# Output directory for compiled binary files (.mcl)
+OUTFLAGS := -B"$(OBJ_DIR)\"
+
+# mikroC library and source search paths (note: Defs is also needed!)
+SPFLAGS := -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Defs\" -SP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" -SP"$(SRC_DIR)\"
+
+# Include paths - ADD incs directory!
+IPFLAGS := -IP"C:\Users\Public\Documents\Mikroelektronika\mikroC PRO for PIC32\Uses\" -IP"$(INC_DIR)\" -IP"$(SRC_DIR)\"
+
+# Final flags for compiler
+CCFLAGS = $(CFLAGS) $(OUTFLAGS) $(SPFLAGS) $(IPFLAGS)
+
+# Source files (just filenames with quotes, no paths - mikroC will find them via -SP)
+#SRC := $(shell Get-ChildItem -Path "$(SRC_DIR)\*.c" | ForEach-Object { '"' + $$_.Name + '"' })
+SRC:= "Main.c" "Config.c" "UHB_Driver.c" "USBdsc.c" 
+# Required libraries for USB HID Bootloader (PIC32MZ)
+# USB library for PIC32MZ devices with High-Speed USB
+LIBS :=     "__Lib_CP0.emcl" "__Lib_Math.emcl" "__Lib_MathDouble_MZ_EF.emcl" "__Lib_System_MZ_EF.emcl" \
+    			"__Lib_SoftResetDma.emcl" "__Lib_Delays.emcl" "__Lib_FLASH_MZ.emcl" "__Lib_USB_MZ_HS.emcl" 
+
+# Combine source files and libraries
+ALL_FILES := $(SRC) $(LIBS)
+
+# Output target
+TARGET := $(BIN_DIR)\$(TARGET_NAME).hex
+
+# Default target
+all:  $(TARGET)
+
+# Build rule (mikroC compiles and links in one step)
+$(TARGET): 
+	@Write-Host "Compiling and linking to $@"
+	& $(CC) $(CCFLAGS) -N"$(BIN_DIR)\$(TARGET_NAME).mcp32" $(ALL_FILES) -O$@
+	@Write-Host ""
+	@Write-Host "Checking for output files..."
+	@Write-Host "Files in bins:"
+	@Get-ChildItem -Path "$(BIN_DIR)" -ErrorAction SilentlyContinue
+	@Write-Host ""
+	@Write-Host "Files in objs:"
+	@Get-ChildItem -Path "$(OBJ_DIR)" -ErrorAction SilentlyContinue
+	@Write-Host ""
+	@Write-Host "Moving .emcl intermediate files to objs..."
+	-Get-ChildItem -Path "$(SRC_DIR)\*.emcl" -ErrorAction SilentlyContinue | Move-Item -Destination "$(OBJ_DIR)" -Force
+	-Get-ChildItem -Path "$(SRC_DIR)\*.asm" -ErrorAction SilentlyContinue | Move-Item -Destination "$(OBJ_DIR)" -Force
+	-Get-ChildItem -Path "$(SRC_DIR)\*.cp" -ErrorAction SilentlyContinue | Move-Item -Destination "$(OBJ_DIR)" -Force
+	-Get-ChildItem -Path "$(SRC_DIR)\*.lst" -ErrorAction SilentlyContinue | Move-Item -Destination "$(OBJ_DIR)" -Force	
+	@Write-Host ""	
+
+
+# Directory and header management
+build_dir:
+	@Write-Host "Creating directories if not exist"
+	if (-not (Test-Path "$(OBJ_DIR)")) { New-Item -ItemType Directory -Path "$(OBJ_DIR)" | Out-Null }
+	if (-not (Test-Path "$(INC_DIR)")) { New-Item -ItemType Directory -Path "$(INC_DIR)" | Out-Null }
+	if (-not (Test-Path "$(BIN_DIR)")) { New-Item -ItemType Directory -Path "$(BIN_DIR)" | Out-Null }
+	@Write-Host "Copying header files to include directory"
+	-Get-ChildItem -Path "$(SRC_DIR)\*.h" -ErrorAction SilentlyContinue | Move-Item -Destination "$(INC_DIR)" -Force
+
+# Clean rule
+clean:
+	@Write-Host "Cleaning build artifacts"
+	Remove-Item -Path "$(OBJ_DIR)\*" -Force -ErrorAction SilentlyContinue
+	Remove-Item -Path "$(BIN_DIR)\*" -Force -ErrorAction SilentlyContinue
+
+# Debug target
+debug:
+	@Write-Host "ROOT_DIR: $(ROOT_DIR)"
+	@Write-Host "SRC_DIR: $(SRC_DIR)"
+	@Write-Host "Source files found:"
+	@Get-ChildItem -Path "$(SRC_DIR)\*.c" | Select-Object -ExpandProperty Name
+
+.PHONY: all clean build_dir debug
